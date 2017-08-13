@@ -1,5 +1,4 @@
 from scrape import get_image
-from analyze import check_if_real
 from PIL import Image
 
 
