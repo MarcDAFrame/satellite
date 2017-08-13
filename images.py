@@ -1,6 +1,9 @@
+"""
+The images module
+"""
+import os.path
 import cv2
 import numpy as np
-import os.path
 # img = cv2.imread('img.png')
 # vis = np.concatenate((img1, img2), axis=1)
 # cv2.imwrite('out.png', vis)
@@ -9,10 +12,14 @@ import os.path
 
 
 
-
 def combine_images(file_dir):
-    #dirs = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    # print(os.listdir(file_dir))
+    """
+    A method that combines images
+
+    @param {string} file_dir - The file directory that you are loading from
+
+    @returns {void}
+    """
     break_now = False
     current_y = 0
     current_x = 0
@@ -42,8 +49,6 @@ def combine_images(file_dir):
         visuals.append(np.concatenate(image_row, axis=1))
     vis = np.concatenate(visuals, axis=0)
     cv2.imwrite(file_dir + '1out.png', vis)
-        
-    
 
 
 combine_images('./images/toronto/')
