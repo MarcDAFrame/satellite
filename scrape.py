@@ -13,8 +13,7 @@ def get_image(y_pos, x_pos, file_name):
     @param {string} file_name - The name that the file will be saved under
     """
 
-    base_url = "https://maps.googleapis.com/maps/api/staticmap?center=%s,%s&zoom=19&size=1000x1000&maptype=satellite"
-    url = base_url % (y_pos, x_pos)
+    url = "https://maps.googleapis.com/maps/api/staticmap?center=%s,%s&zoom=19&size=1000x1000&maptype=satellite" % (y,x)
     print(url)
     urlretrieve(url, file_name)
 
