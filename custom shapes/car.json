@@ -1,0 +1,14 @@
+{
+    "menu": {
+        
+        "id": "car",
+
+        "features": [
+            {"type": "shape", "id" : "body", "sides": "4", "coordinates" : [[0, 0],[1, 1]]},
+            {"type": "shape", "id" : "window" ,"sides": "4", "coordinates" : [[0.125, 0.125],[0.875, 0.875]]},
+            {"type" : "relationship", "id" : "body-window1", "parameters" : ["distance", "body.coordinates[0]", "window.coordinates[0]"]}
+        ]
+
+
+    }
+}
